@@ -1,7 +1,19 @@
 <template>
   <section class="hello">
-    <h3>Say hello to NOXICA</h3>
-    <p>
+    <h3
+      data-aos="fade-left"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="800"
+    >
+      Say hello to NOXICA
+    </h3>
+    <p
+      data-aos="fade-right"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="800"
+    >
       Easily setup and activate the AI. Save time with valuable inbuilt presets.
       Perfect for almost any kind of usage, digital nomads, freelancers, and
       just about everyone.
@@ -11,10 +23,21 @@
       width="517"
       height="512"
       alt="A smiling camera lens"
+      data-aos="flip-right"
+      data-aos-duration="800"
     />
     <button>Own your own personal AI Today</button>
   </section>
 </template>
+
+<script setup>
+import { onMounted } from "vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
+onMounted(() => {
+  AOS.init();
+});
+</script>
 
 <style scoped lang="scss">
 .hello {

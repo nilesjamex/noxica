@@ -2,15 +2,27 @@
   <section class="testimonial">
     <div class="testimonial__content">
       <div class="testimonial__text">
-        <h2>
+        <h2
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-easing="linear"
+        >
           Since 2023, Noxica has helped people throughout the world manage their
           daily lives in the most natural way possible.
         </h2>
-        <p>
+        <p data-aos="fade-up" data-aos-duration="1700" data-aos-easing="linear">
           There will be no queuing for guidance and support or verification, no
           arbitration clause, no hidden costs, and no nonsense.
         </p>
-        <button>Start using NOXICA today.</button>
+        <button
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          data-aos-easing="linear"
+          data-aos-delay="300"
+          data-aos-anchor-placement="center-bottom"
+        >
+          Start using NOXICA today.
+        </button>
       </div>
       <div class="testimonial__grid">
         <div class="item">
@@ -89,6 +101,15 @@
   </section>
 </template>
 
+<script setup>
+import { onMounted } from "vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
+onMounted(() => {
+  AOS.init();
+});
+</script>
+
 <style lang="scss" scoped>
 .testimonial {
   background-color: $bg;
@@ -148,10 +169,30 @@
       padding: 1.25rem 0.8rem;
       &:nth-child(1) {
         margin-left: 2rem;
+        &:hover {
+          animation-name: bounce-6;
+          animation-timing-function: ease;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+        }
       }
       &:nth-child(4) {
         margin-top: -2rem;
         margin-left: 1rem;
+        &:hover {
+          animation-name: bounce-6;
+          animation-timing-function: ease;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+        }
+      }
+      &:nth-child(3) {
+        &:hover {
+          animation-name: bounce-6;
+          animation-timing-function: ease;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+        }
       }
       &__arrow {
         @extend %center;
@@ -188,6 +229,29 @@
         line-height: Max(1.25rem, 20px);
         color: $white;
       }
+    }
+  }
+  @keyframes bounce-6 {
+    0% {
+      transform: scale(1, 1) translateY(0);
+    }
+    10% {
+      transform: scale(1.1, 0.9) translateY(0);
+    }
+    30% {
+      transform: scale(0.9, 1.1) translateY(-100px);
+    }
+    50% {
+      transform: scale(1.05, 0.95) translateY(0);
+    }
+    57% {
+      transform: scale(1, 1) translateY(-7px);
+    }
+    64% {
+      transform: scale(1, 1) translateY(0);
+    }
+    100% {
+      transform: scale(1, 1) translateY(0);
     }
   }
 }

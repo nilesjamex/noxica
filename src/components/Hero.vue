@@ -12,19 +12,40 @@
     </nav>
     <div class="hero__content">
       <div class="item">
-        <h2>
+        <h2
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-easing="linear"
+        >
           AI Powered <br />
           Virtual Personal Assistants.
         </h2>
-        <p>
+        <p data-aos="fade-up" data-aos-duration="1700" data-aos-easing="linear">
           Save time, money, effort, use our feature-loaded AI personal virtual
           assistants for personal and business users.
         </p>
-        <button>Get Started</button>
+        <button
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          data-aos-easing="linear"
+          data-aos-delay="300"
+          data-aos-anchor-placement="center-bottom"
+        >
+          Get Started
+        </button>
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+import { onMounted } from "vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
+onMounted(() => {
+  AOS.init();
+});
+</script>
 
 <style scoped lang="scss">
 .hero {

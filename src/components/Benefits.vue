@@ -18,6 +18,7 @@
         width="563"
         height="547"
         alt="an image of a camera lens"
+        data-aos="zoom-in-up"
       />
       <div class="benefits__content__list">
         <div class="items">
@@ -32,7 +33,9 @@
   </div>
 </template>
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const list = ref([
   {
     icon: `<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -107,6 +110,9 @@ const list = ref([
     content: "Controlling smart home devices.",
   },
 ]);
+onMounted(() => {
+  AOS.init();
+});
 </script>
 <style scoped lang="scss">
 .benefits {

@@ -1,11 +1,11 @@
 <template>
   <section class="use">
     <div class="use__text">
-      <h3>
+      <h3 data-aos="fade-up" data-aos-duration="900">
         Using AI Powered Technology, you have personal assistants all to
         yourself, tailored to fit your personal taste.
       </h3>
-      <p>
+      <p data-aos="fade-up" data-aos-duration="1200" data-aos-easing="linear">
         Our AI no dey carry last, you fit interact with am like your woman, and
         e no dey tire.
       </p>
@@ -22,11 +22,19 @@
       alt="an image of a robot"
       width="308"
       height="308"
+      data-aos="zoom-in-right"
+      data-aos-duration="800"
+      data-aos-easing="linear"
     />
   </section>
 </template>
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
+onMounted(() => {
+  AOS.init();
+});
 
 const list = ref([
   {

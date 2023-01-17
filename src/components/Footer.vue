@@ -81,13 +81,14 @@ const footer = ref([
 .footer {
   background-color: $bg;
   padding: 3rem 8% 0;
-  @include flex(flex-start, flex-start, row nowrap);
+  @extend %flex-ac-jb;
   overflow: hidden;
   &__info {
     &__text {
       @extend %flex-ac-jb;
       padding-left: 3rem;
       margin-top: 2rem;
+      margin-right: -6rem;
       p {
         font-family: "Neue Montreal", sans-serif;
         font-style: normal;
@@ -130,6 +131,7 @@ const footer = ref([
     .icons {
       @extend %center;
       gap: 1rem;
+      margin: 0 0 0 3rem;
     }
   }
 }
