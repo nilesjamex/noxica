@@ -4,20 +4,20 @@
       <div class="testimonial__text">
         <h2
           data-aos="fade-up"
-          data-aos-duration="1000"
+          data-aos-duration="600"
           data-aos-easing="linear"
           data-aos-delay="100"
         >
           Since 2023, Noxica has helped people throughout the world manage their
           daily lives in the most natural way possible.
         </h2>
-        <p data-aos="fade-up" data-aos-duration="1700" data-aos-easing="linear">
+        <p data-aos="fade-up" data-aos-duration="600" data-aos-easing="linear">
           There will be no queuing for guidance and support or verification, no
           arbitration clause, no hidden costs, and no nonsense.
         </p>
         <button
           data-aos="fade-up"
-          data-aos-duration="2000"
+          data-aos-duration="400"
           data-aos-easing="linear"
           data-aos-delay="300"
           data-aos-anchor-placement="center-bottom"
@@ -172,9 +172,9 @@ onMounted(() => {
         margin-left: 2rem;
         &:hover {
           animation-name: bounce-6;
-          animation-timing-function: ease;
-          animation-duration: 2s;
-          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          animation-duration: 1s;
+          // animation-iteration-count: infinite;
         }
       }
       &:nth-child(4) {
@@ -183,16 +183,16 @@ onMounted(() => {
         &:hover {
           animation-name: bounce-6;
           animation-timing-function: ease;
-          animation-duration: 2s;
-          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          animation-duration: 1s;
         }
       }
       &:nth-child(3) {
         &:hover {
           animation-name: bounce-6;
           animation-timing-function: linear;
-          animation-duration: 2s;
-          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          animation-duration: 1s;
         }
       }
       &__arrow {

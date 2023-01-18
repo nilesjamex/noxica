@@ -5,7 +5,7 @@
         Using AI Powered Technology, you have personal assistants all to
         yourself, tailored to fit your personal taste.
       </h3>
-      <p data-aos="fade-up" data-aos-duration="1200" data-aos-easing="linear">
+      <p data-aos="fade-up" data-aos-duration="800" data-aos-easing="linear">
         Our AI no dey carry last, you fit interact with am like your woman, and
         e no dey tire.
       </p>
