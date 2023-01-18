@@ -14,20 +14,25 @@
       <div class="item">
         <h2
           data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-easing="linear"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="100"
         >
           AI Powered <br />
           Virtual Personal Assistants.
         </h2>
-        <p data-aos="fade-up" data-aos-duration="1700" data-aos-easing="linear">
+        <p
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="200"
+        >
           Save time, money, effort, use our feature-loaded AI personal virtual
           assistants for personal and business users.
         </p>
         <button
           data-aos="fade-up"
-          data-aos-duration="2000"
-          data-aos-easing="linear"
+          data-aos-duration="500"
           data-aos-delay="300"
           data-aos-anchor-placement="center-bottom"
         >
@@ -166,7 +171,7 @@ onMounted(() => {
       padding: 10px;
       width: Max(13.8125rem, 221px);
       height: Max(3.75rem, 60px);
-      transition: all 0.6s ease-in-out;
+      transition: all 0.1s ease-in-out;
       cursor: pointer;
       margin-top: 1.5rem;
     }

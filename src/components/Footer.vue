@@ -44,7 +44,7 @@
         <img src="@/assets/reddit.svg" alt="reddit" width="24" height="24" />
       </div>
       <img
-        src="@/assets/Ai.png"
+        src="@/assets/Ai.8dc11f79.png"
         alt="an image of a robot"
         width="560"
         height="309"
@@ -86,7 +86,7 @@ const footer = ref([
   &__info {
     &__text {
       @extend %flex-ac-jb;
-      padding-left: 3rem;
+      padding-left: 0rem;
       margin-top: 2rem;
       margin-right: -6rem;
       p {

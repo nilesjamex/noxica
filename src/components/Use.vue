@@ -18,11 +18,11 @@
     </div>
     <img
       class="robot"
-      src="@/assets/robot.png"
+      src="@/assets/Ai.png"
       alt="an image of a robot"
-      width="308"
-      height="308"
-      data-aos="zoom-in-right"
+      width="215"
+      height="215"
+      data-aos="fade-in-right"
       data-aos-duration="800"
       data-aos-easing="linear"
     />
@@ -148,5 +148,9 @@ const list = ref([
     left: 0;
     bottom: 0;
   }
+}
+
+img {
+  transform: rotate(45deg);
 }
 </style>

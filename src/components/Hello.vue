@@ -9,7 +9,7 @@
       Say hello to NOXICA
     </h3>
     <p
-      data-aos="fade-right"
+      data-aos="fade-left"
       data-aos-anchor-placement="top-bottom"
       data-aos-easing="ease-out-cubic"
       data-aos-duration="800"
@@ -23,7 +23,7 @@
       width="517"
       height="512"
       alt="A smiling camera lens"
-      data-aos="flip-right"
+      data-aos="fade-up"
       data-aos-duration="800"
     />
     <button>Own your own personal AI Today</button>

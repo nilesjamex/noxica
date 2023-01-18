@@ -6,6 +6,7 @@
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-easing="linear"
+          data-aos-delay="100"
         >
           Since 2023, Noxica has helped people throughout the world manage their
           daily lives in the most natural way possible.
@@ -189,7 +190,7 @@ onMounted(() => {
       &:nth-child(3) {
         &:hover {
           animation-name: bounce-6;
-          animation-timing-function: ease;
+          animation-timing-function: linear;
           animation-duration: 2s;
           animation-iteration-count: infinite;
         }
