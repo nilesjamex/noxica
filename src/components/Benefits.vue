@@ -119,8 +119,17 @@ onMounted(() => {
   background-color: $bg;
   padding: 4rem 8% 2rem;
   height: 100vh;
+  overflow: hidden;
+  @include respondMax("desktop") {
+    height: auto;
+    background-image: unset;
+  }
   &__text {
     width: Min(821px, 100%);
+    @include respondMax("desktop") {
+      width: 100%;
+      text-align: center;
+    }
     h3 {
       font-family: "Neue Montreal", sans-serif;
       font-style: normal;
@@ -138,13 +147,22 @@ onMounted(() => {
       color: $white;
       margin-top: 0.5rem;
       width: Min(696px, 100%);
+      @include respondMax("desktop") {
+        width: 100%;
+      }
     }
   }
   &__content {
     @extend %flex-ac-jb;
     gap: 3rem;
+    @include respondMax("desktop") {
+      flex-direction: column;
+    }
     img {
       object-fit: contain;
+      @include respondMax("mobile3x") {
+        width: 100%;
+      }
     }
     &__list {
       .items {
@@ -155,6 +173,17 @@ onMounted(() => {
         span {
           min-width: 200px;
           max-width: 236px;
+        }
+        @include respondMax("desktop") {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-grow: 1;
+          flex-wrap: wrap;
+          span {
+            flex-shrink: 0;
+          }
         }
         &__text {
           font-family: "Neue Montreal", sans-serif;
@@ -178,6 +207,12 @@ onMounted(() => {
         line-height: Max(1.195rem, 19px);
         color: $white;
         margin-top: 2rem;
+        @include respondMax("desktop") {
+          margin: 1.5rem auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
     }
   }

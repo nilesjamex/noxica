@@ -83,12 +83,21 @@ const footer = ref([
   padding: 3rem 8% 0;
   @extend %flex-ac-jb;
   overflow: hidden;
+  @include respondMax("tablet2x") {
+    flex-direction: column;
+  }
   &__info {
     &__text {
       @extend %flex-ac-jb;
       padding-left: 0rem;
       margin-top: 2rem;
       margin-right: -6rem;
+      @include respondMax("tablet2x") {
+        flex-wrap: wrap;
+        margin-right: unset;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
       p {
         font-family: "Neue Montreal", sans-serif;
         font-style: normal;
@@ -96,15 +105,23 @@ const footer = ref([
         font-size: Max(1rem, 16px);
         line-height: Max(1.195rem, 19px);
         color: $white;
+        height: auto;
         &.list {
           @extend %flex-ac;
           gap: 1rem;
+          @include respondMax("tablet2x") {
+            flex-wrap: wrap;
+          }
         }
       }
     }
   }
   &__links {
     @extend %flex-ac-jb;
+    @include respondMax("tablet2x") {
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
     dl {
       dt {
         font-family: "Neue Montreal", sans-serif;
@@ -128,10 +145,21 @@ const footer = ref([
   }
   &__socials {
     margin-right: -10rem;
+    @include respondMax("tablet2x") {
+      flex-wrap: wrap;
+      margin-right: unset;
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
     .icons {
       @extend %center;
       gap: 1rem;
       margin: 0 0 0 3rem;
+      img {
+        cursor: pointer;
+      }
     }
   }
 }

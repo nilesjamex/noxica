@@ -117,12 +117,24 @@ onMounted(() => {
   padding: 3rem 8%;
   height: 100vh;
   position: relative;
+  overflow: hidden;
+  @include respondMax("desktop") {
+    height: auto;
+    background-image: unset;
+  }
   @extend %center;
   &__content {
     @include flex(flex-start, space-between, row nowrap);
     gap: 2rem;
+    @include respondMax("desktop") {
+      flex-direction: column;
+    }
   }
   &__text {
+    @include respondMax("desktop") {
+      text-align: center;
+      width: 100%;
+    }
     h2 {
       font-family: "Neue Montreal";
       font-style: normal;
@@ -130,6 +142,9 @@ onMounted(() => {
       font-size: Max(3rem, 24px);
       line-height: Max(3.625rem, 58px);
       color: $white;
+      @include respondMax("desktop") {
+        line-height: 110%;
+      }
     }
     p {
       font-family: "Neue Montreal", sans-serif;
@@ -139,6 +154,9 @@ onMounted(() => {
       line-height: Max(1.5rem, 24px);
       color: $white;
       margin-top: 2.5rem;
+      @include respondMax("desktop") {
+        line-height: 110%;
+      }
     }
     button {
       background-color: $green;
@@ -159,6 +177,12 @@ onMounted(() => {
     grid-template-columns: 299px 280px;
     grid-template-rows: 250px 260px;
     gap: 1.5rem;
+    @include respondMax("desktop") {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
     .item {
       background-color: transparent;
       background-image: url("@/assets/Union-bg.png");
@@ -168,23 +192,35 @@ onMounted(() => {
       height: 224.32px;
       filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.1));
       padding: 1.25rem 0.8rem;
+      cursor: pointer;
+      @include respondMax("desktop") {
+        flex-shrink: 0;
+        flex-grow: 1;
+      }
       &:nth-child(1) {
         margin-left: 2rem;
+        @include respondMax("desktop") {
+          margin-left: unset;
+        }
         &:hover {
           animation-name: bounce-6;
           animation-timing-function: linear;
-          animation-duration: 1s;
+          animation-duration: 1.25s;
           // animation-iteration-count: infinite;
         }
       }
       &:nth-child(4) {
         margin-top: -2rem;
         margin-left: 1rem;
+        @include respondMax("desktop") {
+          margin-top: unset;
+          margin-left: unset;
+        }
         &:hover {
           animation-name: bounce-6;
           animation-timing-function: ease;
           animation-timing-function: linear;
-          animation-duration: 1s;
+          animation-duration: 1.25s;
         }
       }
       &:nth-child(3) {
@@ -192,13 +228,16 @@ onMounted(() => {
           animation-name: bounce-6;
           animation-timing-function: linear;
           animation-timing-function: linear;
-          animation-duration: 1s;
+          animation-duration: 1.25s;
         }
       }
       &__arrow {
         @extend %center;
         gap: 1rem;
         background-image: none;
+        @include respondMax("desktop") {
+          display: none;
+        }
       }
       &__intro {
         @extend %flex-ac;

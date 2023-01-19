@@ -83,6 +83,10 @@ const list = ref([
   height: 100vh;
   text-align: center;
   position: relative;
+  @include respondMax("tablet2x") {
+    height: auto;
+    background-image: unset;
+  }
   &__text {
     width: Min(840px, 100%);
     text-align: center;
@@ -91,7 +95,7 @@ const list = ref([
       font-family: "Neue Montreal", sans-serif;
       font-style: normal;
       font-weight: 400;
-      font-size: Max(3rem, 24px);
+      font-size: Max(3rem, 20px);
       line-height: Max(3.625rem, 30px);
       color: $white;
     }
@@ -99,7 +103,7 @@ const list = ref([
       font-family: "Neue Montreal", sans-serif;
       font-style: normal;
       font-weight: 400;
-      font-size: Max(1.25rem, 20px);
+      font-size: Max(1.25rem, 16px);
       line-height: Max(1.5rem, 24px);
       color: $black-2;
       margin-top: 0.35rem;
@@ -134,12 +138,24 @@ const list = ref([
       &:nth-child(3) {
         border-bottom: 1px solid #545454;
         border-right: 1px solid #545454;
+        @include respondMax("desktop") {
+          border-bottom: none;
+          border-right: none;
+        }
       }
       &:nth-child(4) {
         border-bottom: 1px solid #545454;
+        @include respondMax("desktop") {
+          border-bottom: none;
+          border-right: none;
+        }
       }
       &:nth-child(5) {
         border-right: 1px solid #545454;
+        @include respondMax("desktop") {
+          border-bottom: none;
+          border-right: none;
+        }
       }
     }
   }
@@ -147,6 +163,9 @@ const list = ref([
     position: absolute;
     left: 0;
     bottom: 0;
+    @include respondMax("tablet2x") {
+      display: none;
+    }
   }
 }
 

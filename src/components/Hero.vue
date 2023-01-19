@@ -2,12 +2,20 @@
   <section class="hero">
     <nav class="hero__nav">
       <p>noxica.</p>
-      <div class="hero__nav__items">
+      <div
+        class="hero__nav__items"
+        :class="{ hero__nav__items__active: active }"
+      >
         <p>Resources</p>
         <p>Support</p>
         <p>Company</p>
         <p>Partners</p>
         <button>Get Started</button>
+      </div>
+      <div class="toggle" @click="active = !active">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
       </div>
     </nav>
     <div class="hero__content">
@@ -44,12 +52,13 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
 onMounted(() => {
   AOS.init();
 });
+const active = ref(false);
 </script>
 
 <style scoped lang="scss">
@@ -63,6 +72,10 @@ onMounted(() => {
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 3;
+  @include respondMax("tablet2x") {
+    height: auto;
+    background-image: unset;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -75,10 +88,16 @@ onMounted(() => {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 100% center;
+    @include respondMax("tablet2x") {
+      height: auto;
+    }
   }
   &__nav {
     @extend %flex-ac-jb;
     padding: 0.5rem 2rem;
+    @include respondMax("tablet2x") {
+      margin-bottom: 3rem;
+    }
     p {
       font-family: "Neue Montreal", sans-serif;
       font-style: normal;
@@ -88,9 +107,43 @@ onMounted(() => {
       text-align: center;
       color: $white;
     }
+    .toggle {
+      display: none;
+      @include respondMax("tablet2x") {
+        display: block;
+        z-index: 3;
+      }
+      .box {
+        width: 25px;
+        height: 1.5px;
+        background-color: $green;
+        margin: 0.25rem 0;
+      }
+    }
     &__items {
       @extend %flex-ac;
       gap: 1.5rem;
+      @include respondMax("tablet2x") {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        order: 1;
+        transition: all 0.2s ease-out;
+        overflow: hidden;
+        z-index: 2;
+        padding: 5% 1.5rem 3%;
+        height: 100%;
+        width: 100%;
+        background-color: $bg;
+        transform: translateX(100%);
+        &__active {
+          transform: translateX(0%);
+        }
+      }
       p {
         font-family: "Neue Montreal", sans-serif;
         font-style: normal;
@@ -149,6 +202,10 @@ onMounted(() => {
       line-height: Max(7.5rem, 50px);
       text-align: center;
       color: $white;
+      @include respondMax("tablet2x") {
+        font-size: Max(3rem, 24px);
+        line-height: 120%;
+      }
     }
     p {
       font-family: "Neue Montreal", sans-serif;

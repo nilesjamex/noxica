@@ -47,6 +47,10 @@ onMounted(() => {
   text-align: center;
   position: relative;
   overflow: hidden;
+  @include respondMax("tablet2x") {
+    height: auto;
+    background-image: unset;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -57,6 +61,9 @@ onMounted(() => {
     background: #264c44;
     filter: blur(100px);
     border-radius: 30%;
+    @include respondMax("tablet2x") {
+      background: none;
+    }
   }
   &::after {
     content: "";
@@ -68,6 +75,9 @@ onMounted(() => {
     background: #a4be7b;
     filter: blur(100px);
     border-radius: 30%;
+    @include respondMax("tablet2x") {
+      background: none;
+    }
   }
   h3 {
     font-family: "Neue Montreal", sans-serif;
@@ -92,6 +102,10 @@ onMounted(() => {
   img {
     margin: 0.3rem auto;
     @extend %center;
+    object-fit: contain;
+    @include respondMax("mobile3x") {
+      width: 100%;
+    }
   }
   button {
     width: Min(331px, 100%);
