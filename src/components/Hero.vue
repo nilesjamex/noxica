@@ -6,11 +6,11 @@
         class="hero__nav__items"
         :class="{ hero__nav__items__active: active }"
       >
-        <p>Resources</p>
-        <p>Support</p>
-        <p>Company</p>
-        <p>Partners</p>
-        <button>Get Started</button>
+        <p @click="active = !active">Resources</p>
+        <p @click="active = !active">Support</p>
+        <p @click="active = !active">Company</p>
+        <p @click="active = !active">Partners</p>
+        <button @click="active = !active">Get Started</button>
       </div>
       <div class="toggle" @click="active = !active">
         <div class="box"></div>
@@ -127,8 +127,8 @@ const active = ref(false);
         position: fixed;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        top: 0;
+        gap: 1.5rem;
+        top: 8vh;
         bottom: 0;
         right: 0;
         order: 1;
